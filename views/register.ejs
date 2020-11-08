@@ -1,0 +1,97 @@
+<%- include('partials/header')%>
+
+<!-- <div class="form-layout1"> -->
+
+
+
+<div class="Container ">
+  <div class="main" id="register">
+    <h1 class="heading mb-3" style="text-align:center;">Register</h1>
+    <form action="/register" method="post">
+      <div class="form-group">
+
+
+        <!-- <div class="row rows-cols-2 justify-content-between" style="padding: 1rem;"> -->
+        <div class="form-group row ">
+          <label for="firstName" class="col-sm-4 col-form-label font-weight-bold">First Name</label>
+          <div class="col-sm-6">
+            <input type="text" name="firstName" class="form-control" id="firstName" required>
+          </div>
+        </div>
+
+        <div class="form-group row ">
+          <label for="lastName" class="col-sm-4 col-form-label font-weight-bold">Last Name</label>
+          <div class="col-sm-6">
+            <input type="text" name="lastName" class="form-control" id="lastName" required>
+          </div>
+        </div>
+
+        <div class="form-group row ">
+          <label for="email" class="col-sm-4 col-form-label font-weight-bold">Email</label>
+          <div class="col-sm-6">
+            <input type="email" class="form-control" name="email" id="email" required>
+          </div>
+        </div>
+
+        <div class="form-group row ">
+          <label for="password" class="col-sm-4 col-form-label font-weight-bold">Password</label>
+          <div class="col-sm-8">
+            <input type="password" class="form-control" name="password" id="password" required>
+          </div>
+        </div>
+
+        <div class="form-group row ">
+          <label for="mobileNumber" class="col-sm-4 col-form-label font-weight-bold">Phone Number</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" name="mobileNumber" id="mobileNumber" required>
+          </div>
+        </div>
+
+        <div class="form-group row ">
+          <label for="qualification" class="col-sm-4 col-form-label font-weight-bold">Qualification</label>
+          <div class="col-sm-8">
+            <select id="qualification" name="qualification" class="col-sm-6 form-control">
+              <option selected value="Schooling">Schooling</option>
+              <option value="Secondary Education">Secondary Education</option>
+              <option value="Bachelors-Degree">Bachelors-Degree</option>
+              <option value="Masters-Degree">Masters-Degree</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group row ">
+          <label for="jobExperience" class="col-sm-4 col-form-label font-weight-bold">Job Experience</label>
+          <div class="col-sm-8">
+            <select id="jobExperience" name="jobExperience" class="col-sm-6 form-control">
+              <option selected value="Fresher">Fresher</option>
+              <option value="Experienced">Experienced</option>
+
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="jobSector" class="col-sm-4 col-form-label font-weight-bold">Select Job Sector</label>
+          <div class="col-sm-8">
+            <select id="jobSector" name="jobSector" class="col-sm-6 form-control">
+              <option selected value="Software">Software</option>
+              <option value="Business/Finance">Business/Finance</option>
+              <option value="Call Center">Call center</option>
+              <option value="Design">Design</option>
+              <option value="Delivery">Delivery</option>
+              <option value="other">Other</option>
+              <option value="Posting  Job">Posting Job</option>
+            </select>
+          </div>
+
+        </div>
+
+      </div>
+      <button id="signIn" type="submit" class="btn btn-primary">Register</button>
+    </form>
+  </div>
+</div>
+
+
+
+<%- include('partials/footerLogin')%>

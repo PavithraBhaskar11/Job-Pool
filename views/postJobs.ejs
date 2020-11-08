@@ -1,0 +1,58 @@
+<%- include('partials/header')%>
+<style media="screen">
+  form {
+
+    padding: 1rem;
+    max-width: 340px;
+    background-color: rgb(112, 174, 224);
+    border-radius: 1rem;
+    margin: 0 auto;
+    padding: 2rem;
+    color: white;
+    margin-top: 2rem;
+  }
+
+  select {
+    padding: 7px 8px;
+  }
+
+  button {}
+</style>
+<h2 class="heading mt-2 mb-3" style="text-align:center; font-style:">Post Jobs</h2>
+<form class="mb-3" action="/postJob" method="post">
+  <div class="form-group has-success mb-3">
+    <label for="job_title" class="control-label">Job title</label>
+    <input type="text" class="form-control" name="jobTitle">
+
+  </div>
+  <div class="form-group has-success">
+    <label for="job_description" class="control-label">Job Description</label>
+    <input type="text" class="form-control" name="jobDescription">
+
+  </div>
+  <div class="form-group has-success">
+    <label for="job_sector" class="control-label">Job Sector</label>
+    <select id="job_sector" name="jobSector">
+      <option value="Software">Software</option>
+      <option value="Businesss">Business/Finance</option>
+      <option value="Telicom">Telicom</option>
+      <option value="Design">Design</option>
+      <option value="Delivery">Delivery</option>
+      <option value="Others">Others</option>
+    </select>
+
+  </div>
+  <div class="form-group has-success">
+    <label for="job_vacancies" class="control-label">Job Vacancy</label>
+    <input type="number" class="form-control" name="noOfVacancies">
+
+  </div>
+  <div class="form-group has-success">
+    <label for="owner email" class="control-label">Owner Email</label>
+    <input type="text" class="form-control" name="ownerEmail">
+
+  </div>
+  <button type="submit" class="btn btn-primary">Post</button>
+</form>
+
+<%- include('partials/footer')%>

@@ -1,0 +1,63 @@
+<%- include('partials/header') %>
+<div class="coverImage">
+  <img src="CSS/home1.jpg" class="img-fluid" alt="Responsive image" style="width:100%; height:40rem; " alt="">
+</div>
+<div class="container mt-4">
+
+  <div class="availableJobs">
+    <h2 class="heading mb-4">Available Jobs</h2>
+    <div class="jobsCard mb-4">
+      <div class="row">
+        <%
+          if(rows.length != 0){
+          var i = 1;
+            rows.forEach(function(data){
+        %>
+        <div class="col-auto mb-3">
+          <div class="card mb-3 " style="width:20rem;" tabindex="0">
+            <div class="card-body" data-container="body" data-trigger="hover" title="" data-toggle="popover" data-title="Description" data-content="<%= data.job_description %>">
+              <h5 class="card-title"><%= data.job_title %></h5>
+              <img src="CSS/jobs.jpg" class="card-img-top mb-4" style="height:13rem;" alt="...">
+              <p class="card-text"><%= data.job_description %></p>
+              <a href="" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal">Apply</a>
+            </div>
+          </div>
+        </div>
+        <%  i++; }) %>
+        <%   } else{ %>
+        <p>No Jobs Found</p>
+
+        <%  } %>
+
+      </div>
+
+    </div>
+  </div>
+  <!-- Button trigger modal -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Job Application</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Confirm Application
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          //when they click on apply they should get email.
+          <button type="button" href="/" class="btn btn-primary">Apply</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<%- include('partials/footer')%>

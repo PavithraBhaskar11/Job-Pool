@@ -1,0 +1,38 @@
+<div class="Container" id="login">
+  <div class="row">
+    <div class="col">
+      <div class="form-layout">
+        <div class="main" id="register">
+          <div class="row" id="loginimage">
+            <div class="col" id="image">
+              <img src="CSS/loginimage.jpg" height="50" width="50" alt="">
+            </div>
+            <div class="col">
+              <h1>Login</h1>
+            </div>
+          </div>
+          <div class="Container">
+            <form action="login" method="POST">
+
+              <div class="form-group">
+                <strong><label for="exampleInputEmail1" style="color: #76a21e">Employee-ID</label></strong>
+                <input name="empId" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+              </div>
+              <div class="form-group">
+                <strong><label for="exampleInputPassword1" style="color: #76a21e">Password</label></strong>
+                <input name="password" type="password" class="form-control" id="exampleInputPassword1" required>
+              </div>
+              <% if(err != null){ %>
+              <div class="form-group">
+                <span style="color: red;"><b><%=err%></b></span>
+              </div>
+              <%}%>
+              <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
